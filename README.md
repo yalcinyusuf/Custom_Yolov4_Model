@@ -11,3 +11,7 @@ https://drive.google.com/file/d/1fQDGAxmkg6IsIHuRCgVEGD57bg-SOtmm/view?usp=shari
 Aşağıda eğittiğim ağırlık dosyasını cfg dosyası yanına spot_pretrained_model klasörü içerisine yerleştiriniz.
 
 https://drive.google.com/file/d/1VfQHqj2XVzwKbBXV6TkKC20cyKnmj9Pw/view?usp=sharing
+
+Örnek Çıktı: 
+
+![Spot Robot Tespiti](https://user-images.githubusercontent.com/61952281/128632551-b5408f38-350c-4117-9764-d153cc65e39b.png)
