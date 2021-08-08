@@ -20,24 +20,11 @@ while True:
 
     frame_blob = cv2.dnn.blobFromImage(frame, 1 / 255, (416, 416), swapRB=True, crop=False)
     labels = ["Spot | Boston Dynamics"]
-    """
-    labels = ["person","bicycle","car","motorcycle","airplane","bus","train","truck","boat",
-          "trafficlight","firehydrant","stopsign","parkingmeter","bench","bird","cat",
-          "dog","horse","sheep","cow","elephant","bear","zebra","giraffe","backpack",
-          "umbrella","handbag","tie","suitcase","frisbee","skis","snowboard","sportsball",
-          "kite","baseballbat","baseballglove","skateboard","surfboard","tennisracket",
-          "bottle","wineglass","cup","fork","knife","spoon","bowl","banana","apple",
-          "sandwich","orange","broccoli","carrot","hotdog","pizza","donut","cake","chair",
-          "sofa","pottedplant","bed","diningtable","toilet","tvmonitor","laptop","mouse",
-          "remote","keyboard","cellphone","microwave","oven","toaster","sink","refrigerator",
-          "book","clock","vase","scissors","teddybear","hairdrier","toothbrush"]
-    """
+
     colors = ["0,0,255", "0,0,255", "255,0,0", "255,255,0", "0,255,0"]
     colors = [np.array(color.split(",")).astype("int") for color in colors]
     colors = np.array(colors)
     colors = np.tile(colors, (18, 1))
-
-    #model = cv2.dnn.readNetFromDarknet(r"C:\Users\yusuf\PycharmProjects\YOLO\pretrained_model\yolov3.cfg",r"C:\Users\yusuf\PycharmProjects\YOLO\pretrained_model\yolov3.weights")
     model = cv2.dnn.readNetFromDarknet(r"C:\Users\yusuf\PycharmProjects\YOLO\spot_pretrained_model\spot_yolov4.cfg",r"C:\Users\yusuf\PycharmProjects\YOLO\spot_pretrained_model\spot_yolov4_last.weights")
     layers = model.getLayerNames()
     output_layer = [layers[layer[0] - 1] for layer in model.getUnconnectedOutLayers()]
