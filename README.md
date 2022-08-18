@@ -1,4 +1,5 @@
 # Custom_Yolov4_Model
+Detection of Boston Dynamics Spot robot with the data set I prepared with the Yolov4 algorithm
 
 # 1.
 
